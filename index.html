@@ -5,7 +5,10 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>MONU CART</title>
 
@@ -30,7 +33,9 @@ html {
 
 body {
     margin: 0;
+
     background: #EEEFDC;
+
     color: #191A15;
 
     font-family:
@@ -59,30 +64,44 @@ button {
 ===================================================== */
 
 .site-header {
+
     position: sticky;
+
     top: 0;
+
     z-index: 50;
 
     min-height: 72px;
 
     display: flex;
+
     align-items: center;
+
     gap: 24px;
 
     padding:
         12px
         clamp(18px, 5vw, 58px);
 
-    background: rgba(238, 239, 220, 0.96);
+    background: rgba(
+        238,
+        239,
+        220,
+        0.96
+    );
 
     border-bottom:
-        1px solid rgba(25, 26, 21, 0.08);
+        1px solid
+        rgba(25, 26, 21, 0.08);
 }
 
 
 .logo {
+
     width: 142px;
+
     height: auto;
+
     max-height: 48px;
 
     object-fit: contain;
@@ -92,6 +111,7 @@ button {
 
 
 .header-search {
+
     flex: 1;
 
     max-width: 510px;
@@ -101,17 +121,21 @@ button {
 
 
 .search-box {
+
     position: relative;
 }
 
 
 .search-icon {
+
     position: absolute;
 
     left: 15px;
+
     top: 50%;
 
-    transform: translateY(-50%);
+    transform:
+        translateY(-50%);
 
     color: #85867A;
 
@@ -122,7 +146,9 @@ button {
 
 
 #searchInput {
+
     width: 100%;
+
     height: 42px;
 
     padding:
@@ -141,14 +167,11 @@ button {
     color: #191A15;
 
     font-size: 13px;
-
-    transition:
-        border-color 140ms ease,
-        background 140ms ease;
 }
 
 
 #searchInput:focus {
+
     background: #FFFFFF;
 
     border-color:
@@ -157,11 +180,13 @@ button {
 
 
 #searchInput::placeholder {
+
     color: #929387;
 }
 
 
 .header-market {
+
     display: flex;
 
     align-items: center;
@@ -177,7 +202,9 @@ button {
 
 
 .market-dot {
+
     width: 7px;
+
     height: 7px;
 
     border-radius: 50%;
@@ -187,19 +214,11 @@ button {
 
 
 /* =====================================================
-   MAIN
-===================================================== */
-
-main {
-    min-height: 70vh;
-}
-
-
-/* =====================================================
-   MARKET HERO
+   HERO
 ===================================================== */
 
 .hero {
+
     max-width: 1180px;
 
     margin: auto;
@@ -212,6 +231,7 @@ main {
 
 
 .hero-layout {
+
     display: grid;
 
     grid-template-columns:
@@ -225,7 +245,9 @@ main {
 
 
 .eyebrow {
-    margin: 0 0 15px;
+
+    margin:
+        0 0 15px;
 
     color: #77786E;
 
@@ -238,6 +260,7 @@ main {
 
 
 .hero h1 {
+
     margin: 0;
 
     max-width: 760px;
@@ -254,6 +277,7 @@ main {
 
 
 .hero-description {
+
     max-width: 570px;
 
     margin:
@@ -268,10 +292,13 @@ main {
 
 
 /* =====================================================
-   MARKET NOTICE
+   MARKET INFORMATION
+
+   SAME COLOR AS PAGE BACKGROUND
 ===================================================== */
 
 .market-note {
+
     padding: 20px;
 
     border:
@@ -280,12 +307,12 @@ main {
 
     border-radius: 15px;
 
-    background:
-        rgba(255, 255, 255, 0.52);
+    background: #EEEFDC;
 }
 
 
 .market-note-logo {
+
     width: 78px;
 
     max-height: 34px;
@@ -301,7 +328,9 @@ main {
 
 
 .market-note-title {
-    margin: 0 0 6px;
+
+    margin:
+        0 0 6px;
 
     font-size: 13px;
 
@@ -310,6 +339,7 @@ main {
 
 
 .market-note-text {
+
     margin: 0;
 
     color: #85867A;
@@ -321,10 +351,11 @@ main {
 
 
 /* =====================================================
-   MARKET TOOLBAR
+   MARKET
 ===================================================== */
 
 .market {
+
     max-width: 1180px;
 
     margin: auto;
@@ -334,12 +365,19 @@ main {
 }
 
 
+/* =====================================================
+   MARKET TOOLBAR
+===================================================== */
+
 .market-toolbar {
+
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
-    align-items: center;
+    align-items:
+        center;
 
     gap: 20px;
 
@@ -354,6 +392,7 @@ main {
 
 
 .market-title-area {
+
     display: flex;
 
     align-items: baseline;
@@ -363,6 +402,7 @@ main {
 
 
 .market-title {
+
     margin: 0;
 
     font-size: 25px;
@@ -372,9 +412,83 @@ main {
 
 
 .product-count {
+
     color: #8A8B80;
 
     font-size: 11px;
+}
+
+
+/* =====================================================
+   CATEGORY BUTTONS
+===================================================== */
+
+.categories {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 23px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+
+.categories::-webkit-scrollbar {
+
+    display: none;
+}
+
+
+.category-button {
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        rgba(25, 26, 21, 0.10);
+
+    border-radius: 9px;
+
+    padding:
+        8px 12px;
+
+    background:
+        rgba(255, 255, 255, 0.48);
+
+    color: #66675F;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    transition:
+        background 120ms ease,
+        color 120ms ease,
+        border-color 120ms ease;
+}
+
+
+.category-button:hover {
+
+    background: #FFFFFF;
+}
+
+
+.category-button.active {
+
+    background: #191A15;
+
+    color: #FFFFFF;
+
+    border-color: #191A15;
 }
 
 
@@ -383,6 +497,7 @@ main {
 ===================================================== */
 
 .grid {
+
     display: grid;
 
     grid-template-columns:
@@ -400,6 +515,7 @@ main {
 ===================================================== */
 
 .card {
+
     min-width: 0;
 
     overflow: hidden;
@@ -423,7 +539,9 @@ main {
 
 
 .card:hover {
-    transform: translateY(-3px);
+
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 12px 28px
@@ -436,6 +554,7 @@ main {
 ===================================================== */
 
 .image-wrapper {
+
     position: relative;
 
     width: 100%;
@@ -449,7 +568,9 @@ main {
 
 
 .product-image {
+
     width: 100%;
+
     height: 100%;
 
     display: block;
@@ -460,21 +581,19 @@ main {
 }
 
 
-/* only a tiny movement — intentionally cheap */
-
 .card:hover .product-image {
-    transform: scale(1.015);
+
+    transform:
+        scale(1.015);
 }
 
 
-/* =====================================================
-   PRODUCT LABEL
-===================================================== */
-
 .image-label {
+
     position: absolute;
 
     left: 11px;
+
     top: 11px;
 
     padding:
@@ -483,7 +602,12 @@ main {
     border-radius: 7px;
 
     background:
-        rgba(255, 255, 255, 0.92);
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
 
     color: #66675F;
 
@@ -500,11 +624,13 @@ main {
 ===================================================== */
 
 .info {
+
     padding: 17px;
 }
 
 
 .product-name {
+
     margin: 0;
 
     font-size: 16px;
@@ -518,6 +644,7 @@ main {
 
 
 .description {
+
     margin:
         7px 0 17px;
 
@@ -532,6 +659,7 @@ main {
 
 
 .bottom {
+
     display: flex;
 
     align-items: center;
@@ -543,6 +671,7 @@ main {
 
 
 .price {
+
     font-size: 15px;
 
     font-weight: 750;
@@ -550,6 +679,7 @@ main {
 
 
 .buy {
+
     min-width: 73px;
 
     border: 0;
@@ -576,29 +706,36 @@ main {
 
 
 .buy:hover {
+
     opacity: 0.82;
 }
 
 
 .buy:active {
-    transform: scale(0.96);
+
+    transform:
+        scale(0.96);
 }
 
 
 /* =====================================================
-   SEARCH EMPTY STATE
+   EMPTY SEARCH
 ===================================================== */
 
 .empty {
-    grid-column: 1 / -1;
 
-    padding: 90px 20px;
+    grid-column:
+        1 / -1;
+
+    padding:
+        90px 20px;
 
     text-align: center;
 }
 
 
 .empty-symbol {
+
     margin-bottom: 12px;
 
     color: #77786E;
@@ -608,6 +745,7 @@ main {
 
 
 .empty strong {
+
     display: block;
 
     margin-bottom: 5px;
@@ -617,6 +755,7 @@ main {
 
 
 .empty span {
+
     color: #85867A;
 
     font-size: 12px;
@@ -624,51 +763,11 @@ main {
 
 
 /* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-    max-width: 1180px;
-
-    margin: auto;
-
-    padding:
-        0 30px 40px;
-
-    color: #8D8E83;
-
-    font-size: 10px;
-}
-
-
-.footer-line {
-    height: 1px;
-
-    margin-bottom: 16px;
-
-    background:
-        rgba(25, 26, 21, 0.08);
-}
-
-
-.footer-content {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-}
-
-
-/* =====================================================
-   SHIPPING SCREEN
-
-   IMPORTANT:
-   This intentionally avoids heavy backdrop-filter
-   and complicated animations for better performance.
+   SHIPPING OVERLAY
 ===================================================== */
 
 .shipping {
+
     position: fixed;
 
     inset: 0;
@@ -684,11 +783,17 @@ footer {
     padding: 20px;
 
     background:
-        rgba(238, 239, 220, 0.97);
+        rgba(
+            238,
+            239,
+            220,
+            0.97
+        );
 }
 
 
 .shipping-box {
+
     width:
         min(450px, 100%);
 
@@ -711,7 +816,9 @@ footer {
 
 
 .package {
+
     width: 58px;
+
     height: 58px;
 
     margin:
@@ -732,6 +839,7 @@ footer {
 
 
 .shipping-eyebrow {
+
     margin-bottom: 8px;
 
     color: #77786E;
@@ -745,6 +853,7 @@ footer {
 
 
 .shipping-box h2 {
+
     margin: 0;
 
     font-size: 27px;
@@ -754,6 +863,7 @@ footer {
 
 
 .shipping-box p {
+
     max-width: 350px;
 
     margin:
@@ -768,10 +878,11 @@ footer {
 
 
 /* =====================================================
-   SHIPPING PROGRESS
+   SHIPPING BAR
 ===================================================== */
 
 .bar {
+
     height: 6px;
 
     margin-top: 25px;
@@ -785,6 +896,7 @@ footer {
 
 
 .bar-inner {
+
     width: 30%;
 
     height: 100%;
@@ -804,11 +916,13 @@ footer {
 @keyframes shippingProgress {
 
     0% {
-        transform: translateX(-140%);
+        transform:
+            translateX(-140%);
     }
 
     100% {
-        transform: translateX(450%);
+        transform:
+            translateX(450%);
     }
 
 }
@@ -819,16 +933,17 @@ footer {
 ===================================================== */
 
 .shipping-failed {
+
     display: none;
 
     margin-top: 22px;
 
     padding:
-        15px 17px;
+        16px 18px;
 
     border:
         1px solid
-        rgba(115, 70, 40, 0.22);
+        rgba(115, 70, 40, 0.25);
 
     border-radius: 11px;
 
@@ -841,20 +956,63 @@ footer {
 
 
 .shipping-failed-title {
-    margin-bottom: 5px;
 
-    font-size: 13px;
+    margin-bottom: 6px;
+
+    font-size: 14px;
 
     font-weight: 800;
 }
 
 
 .shipping-failed-text {
+
     font-size: 11px;
 
-    line-height: 1.5;
+    line-height: 1.55;
 
     color: #795C46;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding:
+        0 30px 40px;
+
+    color: #8D8E83;
+
+    font-size: 10px;
+}
+
+
+.footer-line {
+
+    height: 1px;
+
+    margin-bottom: 16px;
+
+    background:
+        rgba(25, 26, 21, 0.08);
+}
+
+
+.footer-content {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    gap: 20px;
 }
 
 
@@ -865,6 +1023,7 @@ footer {
 @media (max-width: 760px) {
 
     .site-header {
+
         flex-wrap: wrap;
 
         gap: 10px;
@@ -875,16 +1034,19 @@ footer {
 
 
     .logo {
+
         width: 112px;
     }
 
 
     .header-market {
+
         margin-left: auto;
     }
 
 
     .header-search {
+
         order: 3;
 
         flex-basis: 100%;
@@ -894,6 +1056,7 @@ footer {
 
 
     .hero {
+
         padding:
             58px 20px
             48px;
@@ -901,6 +1064,7 @@ footer {
 
 
     .hero-layout {
+
         grid-template-columns: 1fr;
 
         gap: 32px;
@@ -908,6 +1072,7 @@ footer {
 
 
     .hero h1 {
+
         font-size:
             clamp(
                 45px,
@@ -918,6 +1083,7 @@ footer {
 
 
     .market {
+
         padding:
             10px 15px
             75px;
@@ -925,6 +1091,7 @@ footer {
 
 
     .grid {
+
         grid-template-columns:
             repeat(
                 2,
@@ -936,21 +1103,25 @@ footer {
 
 
     .info {
+
         padding: 13px;
     }
 
 
     .product-name {
+
         font-size: 14px;
     }
 
 
     .description {
+
         font-size: 10px;
     }
 
 
     .bottom {
+
         flex-direction: column;
 
         align-items: stretch;
@@ -958,22 +1129,26 @@ footer {
 
 
     .buy {
+
         width: 100%;
     }
 
 
     .market-toolbar {
+
         align-items: flex-end;
     }
 
 
     .shipping-box {
+
         padding:
             30px 21px;
     }
 
 
     footer {
+
         padding:
             0 20px 30px;
     }
@@ -990,6 +1165,7 @@ footer {
     *,
     *::before,
     *::after {
+
         animation: none !important;
 
         transition: none !important;
@@ -1013,7 +1189,10 @@ footer {
 
 <header class="site-header">
 
-    <a href="#" aria-label="MONU CART home">
+    <a
+        href="#"
+        aria-label="MONU CART home"
+    >
 
         <img
             src="logo.png"
@@ -1031,6 +1210,7 @@ footer {
             <span class="search-icon">
                 ⌕
             </span>
+
 
             <input
                 id="searchInput"
@@ -1147,6 +1327,7 @@ footer {
                 All products
             </h2>
 
+
             <span
                 class="product-count"
                 id="productCount"
@@ -1159,6 +1340,16 @@ footer {
 
     </div>
 
+
+    <!-- CATEGORY FILTERS -->
+
+    <div
+        class="categories"
+        id="categories"
+    ></div>
+
+
+    <!-- PRODUCTS -->
 
     <div
         class="grid"
@@ -1232,7 +1423,9 @@ footer {
         >
 
             <div class="shipping-failed-title">
+
                 ⚠ Shipping failed
+
             </div>
 
 
@@ -1269,6 +1462,7 @@ footer {
             MONU CART
         </span>
 
+
         <span>
             Probably deliverable.
         </span>
@@ -1293,6 +1487,10 @@ footer {
 
 <script>
 
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
 const productGrid =
     document.getElementById(
         "productGrid"
@@ -1308,6 +1506,12 @@ const productCount =
 const searchInput =
     document.getElementById(
         "searchInput"
+    );
+
+
+const categoriesElement =
+    document.getElementById(
+        "categories"
     );
 
 
@@ -1335,9 +1539,15 @@ const status =
     );
 
 
+/* =====================================================
+   CURRENT CATEGORY
+===================================================== */
+
+let currentCategory = "All";
+
 
 /* =====================================================
-   CREATE PRODUCT
+   CREATE PRODUCT CARD
 ===================================================== */
 
 function createProduct(product) {
@@ -1417,6 +1627,188 @@ function createProduct(product) {
 }
 
 
+/* =====================================================
+   GET CATEGORIES
+===================================================== */
+
+function getCategories() {
+
+    const categorySet =
+        new Set();
+
+
+    PRODUCTS.forEach(
+        function(product) {
+
+            if (
+                product.category &&
+                product.category.trim()
+            ) {
+
+                categorySet.add(
+                    product.category.trim()
+                );
+
+            }
+
+        }
+    );
+
+
+    return Array.from(
+        categorySet
+    ).sort(
+        function(a, b) {
+
+            return a.localeCompare(b);
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CREATE CATEGORY BUTTONS
+===================================================== */
+
+function createCategories() {
+
+    categoriesElement.innerHTML =
+        "";
+
+
+    const categories = [
+        "All",
+        ...getCategories()
+    ];
+
+
+    categories.forEach(
+        function(category) {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.type =
+                "button";
+
+
+            button.className =
+                "category-button";
+
+
+            if (
+                category ===
+                currentCategory
+            ) {
+
+                button.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            button.textContent =
+                category;
+
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    currentCategory =
+                        category;
+
+
+                    createCategories();
+
+                    updateProducts();
+
+                }
+            );
+
+
+            categoriesElement.appendChild(
+                button
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FILTER PRODUCTS
+===================================================== */
+
+function getVisibleProducts() {
+
+    const query =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+    return PRODUCTS.filter(
+        function(product) {
+
+            const matchesCategory =
+                currentCategory === "All" ||
+                product.category ===
+                    currentCategory;
+
+
+            if (
+                !matchesCategory
+            ) {
+
+                return false;
+
+            }
+
+
+            if (!query) {
+
+                return true;
+
+            }
+
+
+            const name =
+                String(
+                    product.name || ""
+                ).toLowerCase();
+
+
+            const description =
+                String(
+                    product.description || ""
+                ).toLowerCase();
+
+
+            const category =
+                String(
+                    product.category || ""
+                ).toLowerCase();
+
+
+            return (
+                name.includes(query) ||
+                description.includes(query) ||
+                category.includes(query)
+            );
+
+        }
+    );
+
+}
+
 
 /* =====================================================
    DISPLAY PRODUCTS
@@ -1424,7 +1816,8 @@ function createProduct(product) {
 
 function displayProducts(products) {
 
-    productGrid.innerHTML = "";
+    productGrid.innerHTML =
+        "";
 
 
     productCount.textContent =
@@ -1435,7 +1828,9 @@ function displayProducts(products) {
         }`;
 
 
-    if (products.length === 0) {
+    if (
+        products.length === 0
+    ) {
 
         productGrid.innerHTML = `
 
@@ -1450,7 +1845,8 @@ function displayProducts(products) {
                 </strong>
 
                 <span>
-                    Try a different search.
+                    Try a different search
+                    or category.
                 </span>
 
             </div>
@@ -1488,6 +1884,18 @@ function displayProducts(products) {
 }
 
 
+/* =====================================================
+   UPDATE PRODUCTS
+===================================================== */
+
+function updateProducts() {
+
+    displayProducts(
+        getVisibleProducts()
+    );
+
+}
+
 
 /* =====================================================
    SEARCH
@@ -1497,52 +1905,10 @@ searchInput.addEventListener(
     "input",
     function() {
 
-        const query =
-            searchInput.value
-                .trim()
-                .toLowerCase();
-
-
-        if (!query) {
-
-            displayProducts(
-                PRODUCTS
-            );
-
-            return;
-
-        }
-
-
-        const filtered =
-            PRODUCTS.filter(
-                function(product) {
-
-                    return (
-
-                        product.name
-                            .toLowerCase()
-                            .includes(query)
-
-                        ||
-
-                        product.description
-                            .toLowerCase()
-                            .includes(query)
-
-                    );
-
-                }
-            );
-
-
-        displayProducts(
-            filtered
-        );
+        updateProducts();
 
     }
 );
-
 
 
 /* =====================================================
@@ -1557,16 +1923,20 @@ let messageTimer = null;
 function startShipping() {
 
     if (shippingTimer) {
+
         clearTimeout(
             shippingTimer
         );
+
     }
 
 
     if (messageTimer) {
+
         clearInterval(
             messageTimer
         );
+
     }
 
 
@@ -1637,10 +2007,10 @@ function startShipping() {
 
 
     /*
-        10.5 seconds.
+        10.5 seconds of shipping.
 
-        Deliberately slower so the
-        shipping joke has time to land.
+        The failure message then remains
+        visible for 3.5 seconds.
     */
 
     shippingTimer =
@@ -1664,11 +2034,6 @@ function startShipping() {
                     "block";
 
 
-                /*
-                    Keep the failure message
-                    visible long enough to read.
-                */
-
                 setTimeout(
                     function() {
 
@@ -1687,7 +2052,6 @@ function startShipping() {
                             0
                         );
 
-
                     },
                     3500
                 );
@@ -1699,12 +2063,13 @@ function startShipping() {
 }
 
 
-
 /* =====================================================
-   START
+   START WEBSITE
 ===================================================== */
 
-displayProducts(PRODUCTS);
+createCategories();
+
+updateProducts();
 
 </script>
 
