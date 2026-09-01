@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>MONU CART</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -16,447 +24,987 @@
 
         body {
             margin: 0;
+
             background: #EEEFDC;
+
             color: #171813;
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            -webkit-font-smoothing: antialiased;
         }
 
+
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
+
             height: 76px;
+
             padding: 0 40px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
-            border-bottom: 1px solid #dedfcf;
+
+            border-bottom:
+                1px solid #dedfcf;
+
             position: sticky;
+
             top: 0;
-            background: rgba(238, 239, 220, 0.94);
+
+            background:
+                rgba(238, 239, 220, 0.94);
+
             backdrop-filter: blur(10px);
+
             z-index: 10;
         }
 
+
         .logo-image {
+
             width: 145px;
+
             height: auto;
+
             display: block;
         }
 
+
         .tag {
+
             font-size: 13px;
+
             color: #77786e;
         }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
+
             max-width: 1100px;
+
             margin: auto;
-            padding: 100px 30px 70px;
+
+            padding:
+                100px 30px
+                70px;
         }
 
+
         .eyebrow {
+
             font-size: 11px;
+
             font-weight: bold;
+
             letter-spacing: 3px;
+
             color: #77786e;
+
             margin-bottom: 15px;
         }
 
+
         h1 {
-            font-size: clamp(45px, 8vw, 85px);
+
+            font-size:
+                clamp(45px, 8vw, 85px);
+
             line-height: 0.95;
+
             letter-spacing: -5px;
+
             margin: 0;
+
             max-width: 850px;
         }
 
-        .hero p {
+
+        .hero-description {
+
             max-width: 520px;
+
             color: #77786e;
+
             line-height: 1.7;
+
             font-size: 16px;
+
             margin-top: 25px;
         }
 
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
         .products {
+
             max-width: 1100px;
+
             margin: auto;
-            padding: 20px 30px 100px;
+
+            padding:
+                20px 30px
+                100px;
         }
 
-        .section-title {
-            font-size: 28px;
-            letter-spacing: -1px;
+
+        .section-top {
+
+            display: flex;
+
+            align-items: end;
+
+            justify-content: space-between;
+
             margin-bottom: 25px;
         }
 
+
+        .section-title {
+
+            font-size: 28px;
+
+            letter-spacing: -1px;
+
+            margin: 0;
+        }
+
+
+        .product-count {
+
+            color: #77786e;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PRODUCT GRID
+        ========================= */
+
         .grid {
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(230px, 1fr)
+                );
+
             gap: 18px;
         }
 
+
+        /* =========================
+           PRODUCT CARD
+        ========================= */
+
         .card {
+
             background: white;
-            border: 1px solid #dedfd3;
+
+            border:
+                1px solid #dedfd3;
+
             border-radius: 18px;
+
             overflow: hidden;
-            transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+            transition:
+                transform 0.18s ease,
+                box-shadow 0.18s ease;
         }
+
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(30, 30, 20, 0.08);
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(30, 30, 20, 0.08);
         }
 
+
         .product-image {
+
             width: 100%;
+
             aspect-ratio: 1;
+
             object-fit: cover;
+
             display: block;
+
             background: #f7f7ed;
         }
 
+
         .info {
+
             padding: 20px;
         }
 
+
         .name {
+
             font-size: 18px;
+
             font-weight: bold;
         }
 
+
         .description {
+
             color: #77786e;
+
             font-size: 13px;
+
             line-height: 1.5;
-            margin: 8px 0 20px;
+
+            margin:
+                8px 0
+                20px;
+
             min-height: 40px;
         }
 
+
         .bottom {
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
+            gap: 10px;
         }
 
+
         .price {
+
             font-weight: bold;
+
             font-size: 17px;
         }
 
+
+        /* =========================
+           BUY BUTTON
+        ========================= */
+
         .buy {
+
             border: 0;
+
             border-radius: 10px;
+
             background: #171813;
+
             color: white;
-            padding: 11px 17px;
+
+            padding:
+                11px 17px;
+
             font-weight: bold;
+
             cursor: pointer;
-            transition: transform 0.15s ease, opacity 0.15s ease;
+
+            transition:
+                transform 0.15s ease,
+                opacity 0.15s ease;
         }
 
+
         .buy:hover {
+
             opacity: 0.85;
         }
 
+
         .buy:active {
-            transform: scale(0.95);
+
+            transform:
+                scale(0.95);
         }
 
+
+        /* =========================
+           EMPTY SEARCH
+        ========================= */
+
+        .empty {
+
+            grid-column: 1 / -1;
+
+            padding: 70px 20px;
+
+            text-align: center;
+
+            color: #77786e;
+        }
+
+
+        .empty strong {
+
+            display: block;
+
+            color: #171813;
+
+            font-size: 20px;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           SHIPPING SCREEN
+        ========================= */
+
         .shipping {
+
             position: fixed;
+
             inset: 0;
-            background: rgba(238, 239, 220, 0.88);
+
+            background:
+                rgba(238, 239, 220, 0.88);
+
             backdrop-filter: blur(16px);
+
             display: none;
+
             align-items: center;
+
             justify-content: center;
+
             z-index: 100;
+
             padding: 20px;
         }
 
+
         .shipping-box {
+
             background: white;
-            border: 1px solid #dedfd3;
+
+            border:
+                1px solid #dedfd3;
+
             border-radius: 22px;
+
             padding: 40px;
+
             max-width: 470px;
+
             width: 100%;
+
             text-align: center;
-            box-shadow: 0 30px 80px rgba(30, 30, 20, 0.12);
+
+            box-shadow:
+                0 30px 80px
+                rgba(30, 30, 20, 0.12);
         }
 
+
         .package {
+
             font-size: 42px;
+
             margin-bottom: 18px;
         }
 
+
         .shipping-box h2 {
-            margin: 8px 0;
+
+            margin:
+                8px 0;
+
             font-size: 28px;
+
             letter-spacing: -1px;
         }
 
+
         .shipping-box p {
+
             color: #77786e;
+
             line-height: 1.6;
+
             font-size: 14px;
         }
 
+
         .bar {
+
             height: 5px;
+
             background: #e7e7dc;
+
             border-radius: 20px;
+
             overflow: hidden;
+
             margin-top: 25px;
         }
 
+
         .bar-inner {
+
             width: 25%;
+
             height: 100%;
+
             background: #171813;
-            animation: loading 1.2s infinite ease-in-out;
+
+            animation:
+                loading
+                1.2s
+                infinite
+                ease-in-out;
         }
 
+
         @keyframes loading {
+
             0% {
-                transform: translateX(-100%);
+                transform:
+                    translateX(-100%);
             }
 
             50% {
-                transform: translateX(300%);
+                transform:
+                    translateX(300%);
             }
 
             100% {
-                transform: translateX(500%);
+                transform:
+                    translateX(500%);
             }
+
         }
 
+
         #status {
+
             font-size: 12px;
+
             margin-top: 12px;
         }
 
+
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 600px) {
+
             header {
-                padding: 0 18px;
+
+                height: 68px;
+
+                padding:
+                    0 18px;
             }
+
+
+            .logo-image {
+
+                width: 110px;
+            }
+
 
             .hero {
-                padding: 70px 20px 50px;
+
+                padding:
+                    70px 20px
+                    50px;
             }
+
 
             .products {
-                padding: 10px 15px 70px;
+
+                padding:
+                    10px 15px
+                    70px;
             }
 
+
             .grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        minmax(0, 1fr)
+                    );
+
                 gap: 10px;
             }
 
+
             .info {
+
                 padding: 14px;
             }
 
+
             .name {
+
                 font-size: 15px;
             }
 
+
             .buy {
+
                 width: 100%;
             }
 
+
             .bottom {
+
                 flex-direction: column;
-                align-items: stretch;
+
+                align-items:
+                    stretch;
+
                 gap: 10px;
             }
+
+
+            .shipping-box {
+
+                padding:
+                    30px 22px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header>
-    <img src="logo.png" class="logo-image" alt="MONU CART">
-    <div class="tag">probably deliverable</div>
-</header>
 
-<section class="hero">
-    <div class="eyebrow">THE ONLINE MARKET</div>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-    <h1>Things worth buying.</h1>
+    <header>
 
-    <p>
-        A carefully assembled collection of products.
-        Browse around. Find something interesting.
-        Maybe buy it. We have absolutely no idea where
-        the package will go.
-    </p>
-</section>
+        <img
+            src="logo.png"
+            class="logo-image"
+            alt="MONU CART"
+        >
 
-<section class="products">
-
-    <h2 class="section-title">Featured products</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <img
-                class="product-image"
-                src="https://placehold.co/800x800/EEEFDC/171813?text=PRODUCT"
-                alt="Product"
-            >
-
-            <div class="info">
-                <div class="name">Funny Mug</div>
-
-                <div class="description">
-                    Funniest mug in town!
-                </div>
-
-                <div class="bottom">
-                    <div class="price">$9.99</div>
-
-                    <button class="buy" onclick="buy()">
-                        Buy
-                    </button>
-                </div>
-            </div>
+        <div class="tag">
+            probably deliverable
         </div>
 
-        <div class="card">
-            <img
-                class="product-image"
-                src="https://placehold.co/800x800/EEEFDC/171813?text=PRODUCT"
-                alt="Product"
-            >
+    </header>
 
-            <div class="info">
-                <div class="name">Another Thing</div>
 
-                <div class="description">
-                    Nobody really knows what this does.
-                </div>
 
-                <div class="bottom">
-                    <div class="price">$24.50</div>
+    <!-- =========================
+         HERO
+    ========================= -->
 
-                    <button class="buy" onclick="buy()">
-                        Buy
-                    </button>
-                </div>
-            </div>
+    <section class="hero">
+
+        <div class="eyebrow">
+            THE ONLINE MARKET
         </div>
 
-        <div class="card">
-            <img
-                class="product-image"
-                src="products/product1.png"
-                alt="Product"
-            >
+        <h1>
+            Things worth buying.
+        </h1>
 
-            <div class="info">
-                <div class="name">Very Good Item</div>
+        <p class="hero-description">
 
-                <div class="description">
-                    Definitely worth looking at.
-                </div>
+            A carefully assembled collection
+            of products.
 
-                <div class="bottom">
-                    <div class="price">$49.99</div>
+            Browse around. Find something
+            interesting.
 
-                    <button class="buy" onclick="buy()">
-                        Buy
-                    </button>
-                </div>
-            </div>
-        </div>
+            Maybe buy it.
 
-    </div>
-</section>
+            We have absolutely no idea where
+            the package will go.
 
-<div class="shipping" id="shipping">
-
-    <div class="shipping-box">
-
-        <div class="package">📦</div>
-
-        <div class="eyebrow">ORDER PROCESSING</div>
-
-        <h2>Shipping package</h2>
-
-        <p>
-            Shipping package to wherever you are,
-            please don't close this page because we
-            don't like it when you close the page.
         </p>
 
-        <div class="bar">
-            <div class="bar-inner"></div>
+    </section>
+
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+
+    <section class="products">
+
+        <div class="section-top">
+
+            <h2 class="section-title">
+                Featured products
+            </h2>
+
+            <div
+                class="product-count"
+                id="productCount"
+            >
+                0 items
+            </div>
+
         </div>
 
-        <p id="status">Preparing package...</p>
+
+        <div
+            class="grid"
+            id="productGrid"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SHIPPING OVERLAY
+    ========================= -->
+
+    <div
+        class="shipping"
+        id="shipping"
+    >
+
+        <div class="shipping-box">
+
+            <div class="package">
+                📦
+            </div>
+
+            <div class="eyebrow">
+                ORDER PROCESSING
+            </div>
+
+            <h2>
+                Shipping package
+            </h2>
+
+            <p>
+
+                Shipping package to wherever
+                you are, please don't close
+                this page because we don't
+                like it when you close the page.
+
+            </p>
+
+
+            <div class="bar">
+
+                <div
+                    class="bar-inner"
+                ></div>
+
+            </div>
+
+
+            <p id="status">
+                Preparing package...
+            </p>
+
+        </div>
 
     </div>
 
-</div>
 
-<script>
 
-function buy() {
+    <!-- =========================
+         PRODUCTS DATA
+    ========================= -->
 
-    const shipping = document.getElementById("shipping");
-    const status = document.getElementById("status");
+    <script src="products.js"></script>
 
-    shipping.style.display = "flex";
 
-    const messages = [
-        "Preparing package...",
-        "Locating package...",
-        "Contacting shipping department...",
-        "Package has entered the shipping system...",
-        "Finding wherever you are...",
-        "Almost there..."
-    ];
 
-    let i = 0;
+    <!-- =========================
+         WEBSITE CODE
+    ========================= -->
 
-    const messageTimer = setInterval(() => {
+    <script>
 
-        i++;
+        const productGrid =
+            document.getElementById(
+                "productGrid"
+            );
 
-        if (i < messages.length) {
-            status.textContent = messages[i];
+
+        const productCount =
+            document.getElementById(
+                "productCount"
+            );
+
+
+        const shipping =
+            document.getElementById(
+                "shipping"
+            );
+
+
+        const status =
+            document.getElementById(
+                "status"
+            );
+
+
+
+        /* =========================
+           CREATE PRODUCT
+        ========================= */
+
+        function createProduct(product) {
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+
+            card.className =
+                "card";
+
+
+            card.innerHTML = `
+
+                <img
+                    class="product-image"
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+                <div class="info">
+
+                    <div class="name">
+                        ${product.name}
+                    </div>
+
+                    <div class="description">
+                        ${product.description}
+                    </div>
+
+                    <div class="bottom">
+
+                        <div class="price">
+                            ${product.price}
+                        </div>
+
+                        <button
+                            class="buy"
+                            type="button"
+                        >
+                            Buy
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            const buyButton =
+                card.querySelector(
+                    ".buy"
+                );
+
+
+            buyButton.addEventListener(
+                "click",
+                startShipping
+            );
+
+
+            return card;
         }
 
-    }, 1400);
 
-    const shippingTime =
-        8000 + Math.random() * 3000;
 
-    setTimeout(() => {
+        /* =========================
+           DISPLAY PRODUCTS
+        ========================= */
 
-        clearInterval(messageTimer);
+        function displayProducts() {
 
-        status.textContent =
-            "Shipping failed for no reason.";
+            productGrid.innerHTML = "";
 
-        setTimeout(() => {
 
-            shipping.style.display = "none";
+            productCount.textContent =
+                `${PRODUCTS.length} ${
+                    PRODUCTS.length === 1
+                        ? "item"
+                        : "items"
+                }`;
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
 
-        }, 1800);
+            const fragment =
+                document.createDocumentFragment();
 
-    }, shippingTime);
-}
 
-</script>
+            PRODUCTS.forEach(
+                product => {
+
+                    fragment.appendChild(
+                        createProduct(product)
+                    );
+
+                }
+            );
+
+
+            productGrid.appendChild(
+                fragment
+            );
+
+        }
+
+
+
+        /* =========================
+           SHIPPING
+        ========================= */
+
+        function startShipping() {
+
+            shipping.style.display =
+                "flex";
+
+
+            status.textContent =
+                "Preparing package...";
+
+
+            const messages = [
+
+                "Preparing package...",
+
+                "Locating package...",
+
+                "Contacting shipping department...",
+
+                "Package has entered the shipping system...",
+
+                "Finding wherever you are...",
+
+                "Almost there..."
+
+            ];
+
+
+            let messageIndex = 0;
+
+
+            const messageTimer =
+                setInterval(
+                    () => {
+
+                        messageIndex++;
+
+
+                        if (
+                            messageIndex <
+                            messages.length
+                        ) {
+
+                            status.textContent =
+                                messages[
+                                    messageIndex
+                                ];
+
+                        }
+
+                    },
+                    1400
+                );
+
+
+            const shippingTime =
+                8000 +
+                Math.random() * 3000;
+
+
+            setTimeout(
+                () => {
+
+                    clearInterval(
+                        messageTimer
+                    );
+
+
+                    status.textContent =
+                        "Shipping failed for no reason.";
+
+
+                    setTimeout(
+                        () => {
+
+                            shipping.style.display =
+                                "none";
+
+
+                            window.scrollTo({
+
+                                top: 0,
+
+                                behavior: "smooth"
+
+                            });
+
+                        },
+                        1800
+                    );
+
+                },
+                shippingTime
+            );
+
+        }
+
+
+
+        /* =========================
+           START WEBSITE
+        ========================= */
+
+        displayProducts();
+
+    </script>
+
 
 </body>
+
 </html>
