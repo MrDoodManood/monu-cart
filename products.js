@@ -18,8 +18,8 @@ const PRODUCTS = [
 
     {
         name: "Usable Suitcase",
-        price: "$29.99",
-        description: "why am i alive?",
+        price: "$??.??.??",
+        description: "DO NOT OPEN",
         category: "Miscellaneous / Other",
         image: "./products/product3.png"
     },
