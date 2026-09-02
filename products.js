@@ -17,10 +17,10 @@ const PRODUCTS = [
     },
 
     {
-        name: "Usable Suitcase",
-        price: "$??.??.??",
-        description: "DO NOT OPEN",
-        category: "Miscellaneous / Other",
+        name: "Mays Chips",
+        price: "$4.50",
+        description: "Tasty",
+        category: "Consumable Items",
         image: "./products/product3.png"
     },
 
