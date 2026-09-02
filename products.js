@@ -14,6 +14,14 @@ const PRODUCTS = [
         description: "Why drink milk if you can drink beef? Or maybe both!",
         category: "Consumable Items",
         image: "./products/product2.png"
-    }
+    },
+
+    {
+        name: "Usable Suitcase",
+        price: "$29.99",
+        description: "DO NOT OPEN",
+        category: "Miscellaneous / Other",
+        image: "./products/product3.png"
+    },
 
 ];
