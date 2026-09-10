@@ -24,4 +24,12 @@ const PRODUCTS = [
         image: "./products/product3.png"
     },
 
+    {
+        name: "Can of My Emergency Soup",
+        price: "$6.50",
+        description: "⭐⭐⭐⭐⭐ “My son has not blinked since purchasing this. Great value.”",
+        category: "Consumable Items",
+        image: "./products/product4.png"
+    },
+
 ];
