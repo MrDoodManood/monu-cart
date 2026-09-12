@@ -10,7 +10,7 @@ const PRODUCTS = [
 
     {
         name: "Beef Milk",
-        price: "$10.00",
+        price: "$9.99",
         description: "Why drink milk if you can drink beef? Or maybe both!",
         category: "Consumable Items",
         image: "./products/product2.png"
@@ -30,6 +30,14 @@ const PRODUCTS = [
         description: "⭐⭐⭐⭐⭐ “My son has not blinked since purchasing this. Great value.”",
         category: "Consumable Items",
         image: "./products/product4.png"
+    },
+
+    {
+        name: "I Don't Need Your Cereal",
+        price: "$5.49",
+        description: "Yes, you do. You like my cereal. That's a lie. You want my cereal. ",
+        category: "Consumable Items",
+        image: "./products/product5.png"
     },
 
 ];
